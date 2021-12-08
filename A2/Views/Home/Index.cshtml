@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Letters</h1>
+    <p class="lead">Letters é uma plataforma de livros onlines, sendo possível:</p>
+    <p>Editoras podem cadastrar as edições dos seus livros.</p>
+    <p>Livrarias podem escolher as edições dos livros lançados pelas editoras para salvar em suas prateleiras.</p>
+    <p>Clientes podem pegar livros das prateleiras.</p>
+</div>
+
+<div class="d-flex list-inline">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title ">Editoras</h3>
+            <div class="d-flex gap-3">
+                <button type="button">@Html.ActionLink("Cadastrar", "Register", "Editora")</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title ">Livrarias</h3>
+            <div class="d-flex gap-3">
+                <button type="button">@Html.ActionLink("Cadastrar", "Register", "Livraria")</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title ">Clientes</h3>
+            <div class="d-flex gap-3">
+                <button type="button">@Html.ActionLink("Cadastrar", "Register", "Cliente")</button>
+            </div>
+        </div>
+    </div>
+</div>

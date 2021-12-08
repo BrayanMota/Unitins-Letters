@@ -1,0 +1,64 @@
+﻿@model IEnumerable<A2.Models.Edicao>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Nova Edição", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.preco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ano)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.paginas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.autor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sinopse)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.preco)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ano)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.paginas)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.nome)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.autor)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.sinopse)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
+        @Html.ActionLink("Detalhes", "Details", new { id = item.id }) |
+        @Html.ActionLink("Deletar", "Delete", new { id = item.id })
+    </td>
+</tr>
+    }
+
+</table>

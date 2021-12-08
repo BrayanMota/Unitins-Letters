@@ -1,0 +1,66 @@
+﻿@model A2.Models.Edicao
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Edicao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.preco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.preco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ano)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ano)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.paginas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.paginas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.autor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sinopse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sinopse)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

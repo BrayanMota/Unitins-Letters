@@ -1,0 +1,72 @@
+﻿@model A2.Models.Edicao
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Deletar</h2>
+
+<h3>Você tem certeza que deseja deletar?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.preco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.preco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ano)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ano)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.paginas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.paginas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.autor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sinopse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sinopse)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Deletar" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>
